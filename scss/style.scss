@@ -1,0 +1,104 @@
+@import "utilities";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+}
+
+button {
+  border: none;
+}
+
+#navbar {
+  background: #ccc;
+
+  .city-input {
+    @include flex-all-center;
+    padding: 0.5rem 0;
+
+    &-container {
+      margin-right: 0.5rem;
+      width: 50%;
+
+      input[type="text"] {
+        font-family: "Roboto", sans-serif;
+        width: 100%;
+        text-align: center;
+        padding: 0.3rem 0;
+        border: #fff 1px solid;
+        border-radius: 15px;
+
+        &:focus {
+          outline-style: none;
+          border: coral 1px solid;
+        }
+      }
+    }
+
+    &-submit {
+      font-family: "Roboto", sans-serif;
+      border-radius: 15px;
+      padding: calc(0.3rem + 1px) 1rem;
+      background: #333;
+      color: #fff;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #555;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.section {
+  &-details {
+    @include flex-all-center;
+    background: #eee;
+    padding: 0.25rem 0;
+
+    .detail {
+      margin: 0 0.5rem;
+    }
+
+    .wind {
+      @include flex-all-center;
+      i {
+        color: #333;
+      }
+    }
+  }
+
+  &-current {
+    @include flex-all-center;
+    flex-direction: column;
+    height: 50vh;
+
+    .current-info-main {
+      font-size: 8rem;
+      font-weight: 100;
+    }
+
+    .current-info-secondary {
+      @include flex-all-center;
+
+      .info {
+        margin: 0 0.5rem;
+      }
+    }
+  }
+
+  &-forecasts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
